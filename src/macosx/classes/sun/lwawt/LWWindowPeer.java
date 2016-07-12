@@ -1110,7 +1110,9 @@ public class LWWindowPeer
             && !(dst instanceof NullSurfaceData)
             && !(src instanceof NullSurfaceData)
             && src.getSurfaceType().equals(dst.getSurfaceType())
-            && src.getDefaultScale() == dst.getDefaultScale()) {
+            && src.getDefaultScaleX() == dst.getDefaultScaleX()
+            && src.getDefaultScaleY() == dst.getDefaultScaleY())
+        {
             final Rectangle size = src.getBounds();
             final Blit blit = Blit.locate(src.getSurfaceType(),
                                           CompositeType.Src,
